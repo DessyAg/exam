@@ -1,9 +1,15 @@
-size = int(input("masukkan "))
+def rowSumOddNumbers(n) :
+	thelist = []
+	nilai = 1
 
-n=1
-for i in range(size):
-	for j in range(0, i + 1):
-		print(n, end= " ")
-		n = n+1
-	print()
+	for i in range(1, n+1): 
+		rowlist = []
+		for j in range (i):
+			rowlist.append(nilai)
+			nilai += 2
+		thelist.append(rowlist)
+	return thelist
 
+row = 3
+nilai3 = rowSumOddNumbers(row)
+print(sum(nilai3[row-1]))
